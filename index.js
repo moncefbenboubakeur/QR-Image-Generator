@@ -26,7 +26,7 @@ inquirer
     console.log(myUrl.url);
 
     // 2. Use the qr-image npm package to turn the user entered URL into a QR code image.
-    var qr_png = qr.image(myUrl.url, { type: "png" });
+    var qr_png = qr.image(myUrl.url, { type: "png", size: 10 });
     qr_png.pipe(fs.createWriteStream("qr_img.png"));
 
     // 3. Create a txt file to save the user input using the native fs node module.
